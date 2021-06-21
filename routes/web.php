@@ -14,5 +14,32 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        'films' => [
+            'Luca',
+            'Soul',
+            'Toy Story'
+        ]
+    ];
+    return view('home',$data);
+});
+
+Route::get('/film', function () {
+    //return view('welcome');
+    return "Qui ci stanno i film";
+});
+
+Route::get('/serie', function () {
+    //return view('welcome');
+    return "Qui ci stanno le serie";
+});
+
+Route::get('/originals', function () {
+    //return view('welcome');
+    return "Qui ci stanno gli originals";
+});
+
+Route::get('/account', function () {
+    //return view('welcome');
+    return "Qui ci sono le tue impostazioni personali";
 });
